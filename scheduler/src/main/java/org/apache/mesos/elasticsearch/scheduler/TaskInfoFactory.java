@@ -185,7 +185,7 @@ public class TaskInfoFactory {
         final Protos.ContainerInfo.Builder builder = Protos.ContainerInfo.newBuilder()
                 .setType(Protos.ContainerInfo.Type.DOCKER);
 
-        if (configuration.getExternalVolumeDriver() != null && configuration.getExternalVolumeDriver().length() > 0) {
+        /*if (configuration.getExternalVolumeDriver() != null && configuration.getExternalVolumeDriver().length() > 0) {
 
             LOGGER.debug("Is Docker Container and External Driver enabled");
 
@@ -215,7 +215,7 @@ public class TaskInfoFactory {
                         .build());
             }
         }
-
+*/
         builder.setDocker(dockerInfo);
 
         if (!configuration.getElasticsearchSettingsLocation().isEmpty()) {
